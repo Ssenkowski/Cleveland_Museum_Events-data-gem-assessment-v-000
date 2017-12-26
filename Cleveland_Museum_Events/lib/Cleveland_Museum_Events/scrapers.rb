@@ -15,6 +15,6 @@ class ClevelandMuseumEvents::Scrapers
       event_string = event.to_s.split('>')
       event_string[1].split('<')[0]
       binding.pry
-    end.first(15)
+    end
   end
 end
