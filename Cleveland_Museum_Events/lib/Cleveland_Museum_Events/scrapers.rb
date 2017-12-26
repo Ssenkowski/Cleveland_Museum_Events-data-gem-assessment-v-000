@@ -11,7 +11,7 @@ class ClevelandMuseumEvents::Scrapers
   end
 
   def self.scrape_values(css)
-    @doc.search(css).map do |event|
+    @doc.search(css).first(15).map do |event|
       event_string = event.to_s.split('>')
       event_string[1].split('<')[0]
       binding.pry
